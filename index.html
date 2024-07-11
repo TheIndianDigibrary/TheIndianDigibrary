@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Indian Digibrary</title>
+    <title>Online Library</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,67 +22,49 @@
             margin: auto;
             overflow: hidden;
         }
-        #search-bar {
-            margin: 20px 0;
-            text-align: center;
-        }
-        #search-bar input {
-            width: 80%;
-            padding: 10px;
-            font-size: 16px;
-        }
-        #book-list {
+        .section-list {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
         }
-        .book-item {
+        .section-item {
             background: #fff;
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
-        .book-item h3 {
-            margin: 0;
+        .section-item:hover {
+            transform: scale(1.05);
+        }
+        .section-item a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Public Managed Digital Library</h1>
+        <h1>Online Library</h1>
     </header>
     <div class="container">
-        <div id="search-bar">
-            <input type="text" id="search" placeholder="Search for books...">
-        </div>
-        <ul id="book-list">
-            <li class="book-item">
-                <h3>Book Title 1</h3>
-                <p>Author: Author Name 1</p>
+        <ul class="section-list">
+            <li class="section-item">
+                <a href="pure_science.html">Pure Science</a>
             </li>
-            <li class="book-item">
-                <h3>Book Title 2</h3>
-                <p>Author: Author Name 2</p>
+            <li class="section-item">
+                <a href="engineering.html">Engineering</a>
             </li>
-            <li class="book-item">
-                <h3>Book Title 3</h3>
-                <p>Author: Author Name 3</p>
+            <li class="section-item">
+                <a href="mathematics.html">Mathematics</a>
             </li>
         </ul>
     </div>
-    <script>
-        document.getElementById('search').addEventListener('input', function() {
-            const filter = this.value.toLowerCase();
-            const bookItems = document.querySelectorAll('.book-item');
-            bookItems.forEach(function(item) {
-                const title = item.querySelector('h3').textContent.toLowerCase();
-                const author = item.querySelector('p').textContent.toLowerCase();
-                if (title.includes(filter) || author.includes(filter)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
