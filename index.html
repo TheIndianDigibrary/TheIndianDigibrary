@@ -50,23 +50,34 @@
         .section-item:hover {
             transform: scale(1.05);
         }
-        .section-item a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            font-size: 20px;
-        }
         .section-item img {
             width: auto;
             max-width: 100%;
             max-height: 200px;
             margin-bottom: 10px;
         }
+        .section-item button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .section-item button:hover {
+            background-color: #555;
+        }
+        .section-item a {
+            text-decoration: none;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Online Library</h1>
+        <h1>Indian Digibrary: The Digital Library</h1>
     </header>
     <div class="container">
         <div id="about">
@@ -78,19 +89,20 @@
                 <li>Safe environment</li>
                 <li>Reliability</li>
             </ul>
+            <p>It is a public open source project. Feel free to contact in case you want to contribute or give review and comments.</p>
         </div>
         <ul class="section-list">
             <li class="section-item">
                 <img src="science.jpg" alt="Pure Science">
-                <a href="pure_science.html">Pure Science</a>
+                <button><a href="pure_science.html">Pure Science</a></button>
             </li>
             <li class="section-item">
                 <img src="engineering.jpg" alt="Engineering">
-                <a href="engineering.html">Engineering</a>
+                <button><a href="engineering.html">Engineering</a></button>
             </li>
             <li class="section-item">
                 <img src="mathematics.jpg" alt="Mathematics">
-                <a href="mathematics.html">Mathematics</a>
+                <button><a href="mathematics.html">Mathematics</a></button>
             </li>
         </ul>
     </div>
